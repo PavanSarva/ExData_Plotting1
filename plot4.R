@@ -1,3 +1,4 @@
+#The data file needs to be placed in the same directory (place holder) as the current .R file
 dataset <- read.table("household_power_consumption.txt", header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")
 dataset$Date <- as.Date(dataset$Date, format="%d/%m/%Y")
 data_subset <- subset(dataset, subset=(Date == "2007-02-01" | Date == "2007-02-02"))
